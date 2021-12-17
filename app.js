@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const { stringify } = require('querystring');
 const dotenv = require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/honeyDewDB');
+mongoose.connect(MONGODB_URI || 'mongodb://localhost/honeyDewDB');
 const itemSchema = {
     name: String,
 };
