@@ -37,6 +37,10 @@ app.post('/', (req, res) => {
 
 app.post('/delete', (req, res) => {
     Item.findByIdAndRemove(req.body.checkbox, (err) => {
-        res.redirect('/');
+        if (!err) {
+            res.redirect('/');
+        } else {
+            res.redirect('/');
+        }
     });
 });
