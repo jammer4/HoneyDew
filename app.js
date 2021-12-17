@@ -5,18 +5,18 @@ const mongoose = require('mongoose');
 const { stringify } = require('querystring');
 const dotenv = require('dotenv').config();
 
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/honeyDewDB');
-const itemSchema = {
-    name: String,
-};
-
-const Item = mongoose.model('Item', itemSchema);
-
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static("stylesheets"));
 app.use(bodyParser.urlencoded({ extended: true}));
+
+mongoose.connect('mongodb+srv://jammer4:RomanHendrix1221@cluster0.qsmmt.mongodb.net/honeyDewDB?retryWrites=true&w=majority' || 'mongodb://localhost/honeyDewDB');
+const itemSchema = {
+    name: String,
+};
+
+const Item = mongoose.model('Item', itemSchema);
 
 app.listen(process.env.PORT || 8000, () => {
     console.log('Listening on port 8000')
