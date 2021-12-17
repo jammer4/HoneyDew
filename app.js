@@ -3,8 +3,9 @@ const bodyParser = require('body-parser');
 const { urlencoded } = require('body-parser');
 const mongoose = require('mongoose');
 const { stringify } = require('querystring');
+const dotenv = require('dotenv').config();
 
-mongoose.connect("mongodb://localhost:27017/honeyDewDB");
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/honeyDewDB');
 const itemSchema = {
     name: String,
 };
