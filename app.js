@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("stylesheets"));
 app.use(bodyParser.urlencoded({ extended: true}));
 
-mongoose.connect('mongodb+srv://jammer4:RomanHendrix1221@cluster0.qsmmt.mongodb.net/honeyDewDB?retryWrites=true&w=majority' || 'mongodb://localhost/honeyDewDB');
+mongoose.connect('mongodb+srv://jammer4:RomanHendrix1221@cluster0.qsmmt.mongodb.net/honeyDewDB?retryWrites=true&w=majority');
 const itemSchema = {
     name: String,
 };
