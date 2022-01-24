@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("stylesheets"));
 app.use(bodyParser.urlencoded({ extended: true}));
 
-mongoose.connect(process.env.MONGO_DB_URI;
+mongoose.connect(process.env.MONGO_DB_URI);
 const itemSchema = {
     name: String,
 };
